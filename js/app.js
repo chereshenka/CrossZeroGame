@@ -35,10 +35,11 @@ function findWinner(){
          winner = 'нолики';
          overlayContainer.style.visibility = 'visible';  
          winnerMessage.textContent = 'Победили ' +winner+', поздравляем!';       
-      }else if((orderMove > winFields.length) && (winner == '')){
-         overlayContainer.style.visibility = 'visible';  
-         winnerMessage.textContent = 'В этот раз никто не выиграл, попробуйте снова';
       }
+   }
+   if((orderMove > winFields.length) && (winner == '')){
+      overlayContainer.style.visibility = 'visible';  
+      winnerMessage.textContent = 'В этот раз никто не выиграл, попробуйте снова';
    }
 }
 gameField.addEventListener('click', fieldClick);
